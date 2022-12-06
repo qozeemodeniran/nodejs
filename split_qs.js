@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
     // do the spliting
     var qs_text = qs.firstname + " " + qs.lastname;
 
-    // output the splitted query string
+    // output the splitted query string: this saves it to a file
     res.end(qs_text);
 
 }).listen(8080);
