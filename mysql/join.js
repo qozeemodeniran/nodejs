@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 connection.connect(function (err) {
     if (err) throw err;
 
-    // selecting matching records from both tables (users & products): INNER will give same result.
+    // selecting matching records from both tables (users & products): INNER JOIN will give same result.
     var sql = "SELECT users.name AS user, products.name AS favorite FROM users JOIN products ON users.favorite_product = products.id";
 
     var sql2 = "SELECT users.name AS user, products.name AS favorite FROM users INNER JOIN products ON users.favorite_product = products.id";
